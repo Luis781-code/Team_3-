@@ -1,2 +1,4 @@
 este es mi primer commit 
+ Inicio del programa
 este es mi segundo commit 
+Validacion de datos ingresados por el usuario
