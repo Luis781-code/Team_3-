@@ -1,0 +1,57 @@
+COMANDOS GIT
+
+git status    // para ver el stado de los archivos
+git add .     // para agregar el directorio completo
+git commit -m "aqui el comit"   // para comentar los cambios
+git commit -a -m "mensaje"  //para agregar archivos ya modificados (es una version resumida para no pasar por el add pero )
+git commit --amend --no-edit // es un commit editado que no lo crea sobre uno hecho
+git commit --amend "mensaje nuevo" // edita el mensaje de commit pero no crea uno nuevo
+git commit log --oneline  // para ver el resumen de commits
+git commit graph // se visualizan las ramas como grafico
+git log --oneline --graph  //resumidos los commit
+git -v     // para ver la version de git istalada
+git log     // para ver el hash y poder volver a los commits anteriores 
+git checkout + hash(numero hexadecimal)    //para ir a los puntos de control o commits anteriores
+git log --all // visualiza todos los commits independientemente de donde nos ubicamos
+git checkout (nombre de la rama) /// es un atajo para ir a la branch o rama
+
+/// Comentario ( puede ser main o master el nombre de la rama, en mi caso aparece master)
+/// q  // quit para salir de la terminal cuando no aparece como ingresar comandos
+
+git branch nombredelarama // para crear nuevas ramas
+git branch // para ver la rama donde me encuentro
+git checkout -b nombredelarama   //
+
+git switch ramadedestino // para cambia de una rama a otra
+git branch --show-current  // muestra la rama donde estoy ubicada
+git merge nombredelaramaquequieroactualizar // para fusionar las ramas se debe uno ubicar en la rama destino y llamar la rama que quiero actualizar 
+git branch -d nombrederama  // para eliminar la rama
+
+SINCRONIZARREPOSITORIO REMOTO PASOS
+SOLO SI ES NECESARIO ---> git branch -m main // renombramos la rama master a main -- recomendacion de github
+git init // Para iniciar el repo local
+git remote add origin URL // para conectarse al repositorio
+git pull // para obtener cambios
+git push //para enviar cambios
+git remote // lista los repositorios que tengo
+
+git push -u origin main //
+
+
+CLI gh
+winget install --id GitHub.cli // para instalar
+winget upgrade --id GitHub.cli // para update
+gh --version   // para la herramienta cliwinget install --id GitHub.cli
+
+README.md // archivo markdown - buscar directivas
+
+ORDEN PARA REPOSITORIO
+
+git pull // para actualizar en local los cambios hechos (si es clonado)
+git add . // para agregar en local los cambios 
+git commit -m "mensaje" // para comentar el cambio
+git commit -a -m // para agregar comentar los cambios, este resume los dos anteriores
+git push  // para sincronizar con el repositorio
+git push --set upstream origin main //configura una ruta por defecto si no estamos trabajando en un repo clonado
+git push origin main // para indicar la ruta cuando no esta configurada (si esta clonado ya está esta instrucción por defecto)
+git pull origin main --rebase //
