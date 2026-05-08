@@ -35,7 +35,7 @@ git pull // para obtener cambios
 git push //para enviar cambios
 git remote // lista los repositorios que tengo
 
-git push -u origin main //
+
 
 
 CLI gh
@@ -45,13 +45,27 @@ gh --version   // para la herramienta cliwinget install --id GitHub.cli
 
 README.md // archivo markdown - buscar directivas
 
-ORDEN PARA REPOSITORIO
 
+
+
+SINCRONIZAR REPOSITORIO REMOTO PASOS
+SOLO SI ES NECESARIO ---> git branch -m main // renombramos la rama master a main -- recomendacion de github
+git init // Para iniciar el repo local
+git remote add origin URL // para conectarse al repositorio
+git pull // para obtener cambios
+git push //para enviar cambios
+git remote // lista los repositorios que tengo
+git push --set upstream origin main //configura una ruta por defecto 
+git push origin main // para indicar la ruta cuando no esta configurada
+
+ORDEN PARA SINCRONIZAR REPOSITORIO CLONADO
+GIT INIT // inicia el repo local
 git pull // para actualizar en local los cambios hechos (si es clonado)
 git add . // para agregar en local los cambios 
 git commit -m "mensaje" // para comentar el cambio
 git commit -a -m // para agregar comentar los cambios, este resume los dos anteriores
 git push  // para sincronizar con el repositorio
-git push --set upstream origin main //configura una ruta por defecto si no estamos trabajando en un repo clonado
+git push --set upstream origin main //configura una ruta por defecto 
 git push origin main // para indicar la ruta cuando no esta configurada (si esta clonado ya está esta instrucción por defecto)
-git pull origin main --rebase //
+git pull origin main --rebase //trae los cambios
+git branch -m main // renombramos la rama master a main 
